@@ -1,0 +1,12 @@
+# * * * * * "command to be executed"
+# - - - - -
+# | | | | |
+# | | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+# | | | ------- Month (1 - 12)
+# | | --------- Day of month (1 - 31)
+# | ----------- Hour (0 - 23)
+# ------------- Minute (0 - 59)
+# Clean up every sunday morning after 6:00am
+10 6 * * 0 sudo apt-get clean
+20 6 * * 0 sudo apt-get autoremove --purge
+30 6 * * 0 sudo apt-get autoremove
